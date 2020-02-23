@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'ThinkFT';
+    src: local("CircularStd Black"), local("CircularStd-Black"), url("/fonts/CircularStd-Black.otf");
+    font-weight: bold;
+    font-display: swap;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'ThinkFT';
+    src: local("CircularStd Book"), local("CircularStd-Book"), url("/fonts/CircularStd-Book.otf");
+    font-weight: normal;
+    font-display: swap;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'ThinkFT';
+    src: local("CircularStd Medium"), local("CircularStd-Medium"), url("/fonts/CircularStd-Medium.otf");
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'ThinkFT';
+    src: local("CircularStd Bold"), local("CircularStd-Bold"), url("/fonts/CircularStd-Bold.otf");
+    font-weight: 600;
+    font-display: swap;
+    font-style: normal
+}
