@@ -14,13 +14,13 @@ const Alert = Vue.component('Alert', {
 		...mapActions('alerts', ['removeAlert', 'addAlert']),
 	},
 	created() {
-		this.addAlert({ msg: 'Username or password incorrect try again', alertType: 'danger' });
-		setTimeout(() => {
-			this.addAlert({
-				msg: 'successfully done it already and its on the git to go',
-				alertType: 'success',
-			});
-		}, 5000);
+		// this.addAlert({ msg: 'Username or password incorrect try again', alertType: 'danger' });
+		// setTimeout(() => {
+		// 	this.addAlert({
+		// 		msg: 'successfully done it already and its on the git to go',
+		// 		alertType: 'success',
+		// 	});
+		// }, 5000);
 	},
 	render() {
 		return (
@@ -60,7 +60,7 @@ const AlertWrapper = styled.div`
 	position: fixed;
 	top: 8px;
 	z-index: 9999;
-	width: 300px;
+	width: 320px;
 
 	right: 8px;
 	margin: 0;
@@ -73,7 +73,7 @@ const AlertWrapper = styled.div`
 		margin-left: auto;
 
 		&--flex {
-			padding: 0 22px 0 0px;
+			padding: 0 22px 0 26px;
 		}
 		&-success {
 			background: var(--theme-chalk);
@@ -118,6 +118,9 @@ const AlertWrapper = styled.div`
 	svg {
 		margin-right: 8px;
 		fill: inherit;
+		position: absolute;
+		width: 23px;
+		left: 10px;
 	}
 
 	.close {

@@ -2,22 +2,29 @@ import Vue from 'vue';
 import AuthLayout from '.';
 import Input from '../../components/input';
 import Button from '../../components/button';
+import { mapActions, mapState } from 'vuex';
 
 const Login = Vue.component('Login', {
 	data() {
 		return {
 			email: '',
 			password: '',
-			loading: false,
 		};
 	},
 	mixins: [Input],
+	computed: mapState('user', {
+		loading: (state) => state.isLoading,
+	}),
 	methods: {
+		...mapActions('user', ['signIn']),
 		submitForm(e) {
 			e.preventDefault();
 			if (!this.validator(this.email, 'email') || !this.validator(this.password, 'min-8')) return;
 
-			return (this.loading = true);
+			return this.signIn({ email: this.email, password: this.password }).then((res) => {
+				debugger;
+				console.log(res);
+			});
 		},
 	},
 	render() {

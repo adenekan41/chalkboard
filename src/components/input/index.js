@@ -22,7 +22,7 @@ const Input = Vue.component('Input', {
 	methods: {
 		validator(val, types) {
 			let text = val;
-			if (types === 'email' || types === 'email') {
+			if (types === 'email') {
 				let atpos = text.indexOf('@'),
 					dotpos = text.lastIndexOf('.');
 
@@ -33,11 +33,12 @@ const Input = Vue.component('Input', {
 				this.error = '';
 				return true;
 			}
-			if (types === 'require' || types === 'require') {
-				if (text === '') {
+			if (types === 'require') {
+				if (text.length === 0) {
 					this.error = `${'Please this field is required'}`;
 					return false;
 				}
+				this.error = '';
 				return true;
 			}
 			if (types.includes('min-')) {
