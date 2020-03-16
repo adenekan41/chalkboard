@@ -5,17 +5,20 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "eslint .",
+    "lint": "vue-cli-service lint",
     "fix": "eslint --fix .",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "lint": "vue-cli-service lint"
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\""
   },
   "dependencies": {
+    "codewonders-helpers": "^0.0.9",
     "core-js": "^3.6.4",
+    "firebase": "^7.9.1",
     "register-service-worker": "^1.6.2",
     "vue": "^2.6.11",
     "vue-router": "^3.1.5",
-    "vue-styled-components": "^1.4.14"
+    "vue-styled-components": "^1.4.14",
+    "vuelidate": "^0.7.5",
+    "vuex": "^3.1.2"
   },
   "devDependencies": {
     "@vue/babel-helper-vue-jsx-merge-props": "^1.0.0",
@@ -26,8 +29,9 @@
     "@vue/cli-plugin-router": "~4.2.0",
     "@vue/cli-service": "~4.2.0",
     "@vue/eslint-config-prettier": "^6.0.0",
-    "svg-to-vue-component": "^0.3.8",
     "babel-eslint": "^10.0.3",
+    "babel-plugin-jsx-event-modifiers": "^2.0.5",
+    "babel-plugin-jsx-v-model": "^2.0.3",
     "eslint": "^6.7.2",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-vue": "^6.1.2",
@@ -35,6 +39,7 @@
     "node-sass": "^4.12.0",
     "prettier": "^1.19.1",
     "sass-loader": "^8.0.2",
+    "svg-to-vue-component": "^0.3.8",
     "vue-template-compiler": "^2.6.11"
   },
   "gitHooks": {

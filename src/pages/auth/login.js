@@ -1,7 +1,25 @@
 import Vue from 'vue';
 import AuthLayout from '.';
+import Input from '../../components/input';
+import Button from '../../components/button';
 
 const Login = Vue.component('Login', {
+	data() {
+		return {
+			email: '',
+			password: '',
+			loading: false,
+		};
+	},
+	mixins: [Input],
+	methods: {
+		submitForm(e) {
+			e.preventDefault();
+			if (!this.validator(this.email, 'email') || !this.validator(this.password, 'min-8')) return;
+
+			return (this.loading = true);
+		},
+	},
 	render() {
 		return (
 			<AuthLayout
@@ -10,13 +28,28 @@ const Login = Vue.component('Login', {
 			>
 				<h1>Login to your account.</h1>
 				<p>Its straight quick and easy.</p>
-				<form>
-					<input placeholder="Enter your email" type="email" class="form-control" />
-					<input placeholder="Enter your password" type="password" class="form-control" />
+				<form onSubmit={(e) => this.submitForm(e)}>
+					<Input
+						name="email"
+						validate="email"
+						type="email"
+						vModel={this.email}
+						placeholder="Enter your email"
+					/>
+					<Input
+						name="password"
+						validate="min-8"
+						type="password"
+						vModel={this.password}
+						placeholder="Enter your password"
+					/>
+					{/* <input placeholder="Enter your password" type="password" class="form-control" /> */}
 					<router-link to="/forgot" class="float-right">
 						Forgot password ?
 					</router-link>
-					<button class="btn btn-chalk">Login to your account</button>
+					<Button type="submit" isLoading={this.loading}>
+						Login to your account
+					</Button>
 				</form>
 				<h5>
 					Dont have an account ?{' '}

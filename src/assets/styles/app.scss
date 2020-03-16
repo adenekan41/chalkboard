@@ -6,6 +6,7 @@
   --bg: #fff;
   --button-index: #eeeeee;
   --cw: #000;
+  --theme-chalk: #5c43b1;
   --invert: 0;
   --mark: #f6f6f6;
   --theme-amount: 0;
@@ -18,33 +19,31 @@
   --gray-alpha: rgba(255, 255, 255, 0.95);
   --token: #666;
   --border-color: #e4e4e4;
-  --nav-link: rgba(0, 0, 0, .5);
+  --nav-link: rgba(0, 0, 0, 0.5);
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
 
 :global(body) {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir,
-    Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir, Helvetica, sans-serif;
 }
 
 body {
   background: var(--bg) !important;
   padding-right: 0px !important;
-  font-family: "ThinkFT", sans-serif !important;
+  font-family: 'ThinkFT', sans-serif !important;
 }
 
 html {
-  font-family: "ThinkFT", sans-serif !important;
+  font-family: 'ThinkFT', sans-serif !important;
   scroll-behavior: smooth;
   -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -73,10 +72,10 @@ h5,
 h6,
 p,
 button,
-input[type=text],
-input[type=date],
-input[type=password],
-input[type=value],
+input[type='text'],
+input[type='date'],
+input[type='password'],
+input[type='value'],
 b,
 label,
 td,
@@ -84,7 +83,7 @@ select,
 textarea,
 th {
   text-rendering: geometricPrecision;
-  color: var(--cw)
+  color: var(--cw);
 }
 
 a {

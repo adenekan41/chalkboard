@@ -4,7 +4,16 @@ import Logo from '@/assets/icons/logo.svg';
 import Person from '@/assets/icons/chari.svg';
 
 const AuthLayout = Vue.component('AuthLayout', {
-	props: ['text', 'subText'],
+	props: {
+		text: {
+			type: String,
+			required: true,
+		},
+		subText: {
+			type: String,
+			required: true,
+		},
+	},
 	render() {
 		return (
 			<Wrapper>
@@ -122,14 +131,14 @@ const Grid1 = styled.div`
 	h3 {
 		color: #f1f1f1;
 
-		font-size: 1.8vw;
+		font-size: 28px;
 		font-weight: 600;
 	}
 	p {
 		text-transform: capitalize;
 		color: gainsboro;
 		margin-top: 1rem;
-		font-size: 0.95vw;
+		font-size: 14px;
 	}
 	.flex-3 {
 		flex: 0.3;
@@ -204,12 +213,6 @@ const Main = styled.main`
 		&:focus {
 			border-color: #5b42b1c7 !important;
 		}
-	}
-	.btn-chalk {
-		background: #5b42b1;
-		color: #fff;
-		border: none;
-		padding: 15px 32px;
 	}
 `;
 export default AuthLayout;
