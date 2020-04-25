@@ -6,12 +6,14 @@ const Input = Vue.component('Input', {
 		validate: String,
 		value: { type: String, required: false, default: '' },
 		label: { type: String, required: false, default: '' },
+		name: { type: String, required: false, default: '' },
 		type: { type: String, required: false, default: 'text' },
 		placeholder: { type: String, required: false, default: '' },
 	},
 	data() {
 		return {
 			error: '',
+			isValid: false,
 		};
 	},
 	watch: {
@@ -28,10 +30,10 @@ const Input = Vue.component('Input', {
 
 				if (atpos < 1 || dotpos - atpos < 2) {
 					this.error = 'Please enter a correct email address';
-					return false;
+					return (this.isValid = false);
 				}
 				this.error = '';
-				return true;
+				return (this.isValid = true);
 			}
 			if (types === 'require') {
 				if (text.length === 0) {

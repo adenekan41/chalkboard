@@ -20,7 +20,7 @@ const actions = {
 		commit('SET_ALERTS', { msg, alertType, id });
 		setTimeout(function() {
 			commit('REMOVE_ALERT', id);
-		}, 80000);
+		}, 10000);
 	},
 };
 

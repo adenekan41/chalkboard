@@ -67,6 +67,7 @@ const Wrapper = styled.section`
 		}
 	}
 `;
+
 const Grid = styled.div`
 	display: grid;
 	grid-template-columns: 0.5fr 1.4fr;
