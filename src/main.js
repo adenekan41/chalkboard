@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import App from './app.js';
+import App from './App.js';
 import './registerServiceWorker';
 import router from './router';
 import Vuelidate from 'vuelidate';

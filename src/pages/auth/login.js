@@ -22,7 +22,6 @@ const Login = Vue.component('Login', {
 			if (!this.validator(this.email, 'email') || !this.validator(this.password, 'min-8')) return;
 
 			return this.signIn({ email: this.email, password: this.password }).then((res) => {
-				debugger;
 				console.log(res);
 			});
 		},

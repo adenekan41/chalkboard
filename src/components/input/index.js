@@ -71,6 +71,7 @@ const Input = Vue.component('Input', {
 		);
 	},
 });
+
 const InputWrapper = styled.div`
 	input {
 		border-color: #ededed !important;
@@ -93,4 +94,5 @@ const InputWrapper = styled.div`
 		margin-bottom: 1rem;
 	}
 `;
+
 export default Input;
