@@ -20,7 +20,9 @@ const AuthLayout = Vue.component('AuthLayout', {
 				<Grid>
 					<Person class="chair animated fadeIn" />
 					<Grid1 class="animated fadeInLeft">
-						<Logo class="logo" />
+						<router-link to="/">
+							<Logo class="logo" />
+						</router-link>
 
 						<div class="flex-3">
 							<h3> {this.text}</h3>
@@ -76,7 +78,7 @@ const Grid = styled.div`
 	}
 `;
 const Grid1 = styled.div`
-	background: #5b42b1;
+	background: var(--theme-chalk);
 	height: 100vh;
 
 	padding: 1rem 3rem;
@@ -188,7 +190,7 @@ const Main = styled.main`
 		margin-bottom: 2rem;
 	}
 	a {
-		color: #5b42b1 !important;
+		color: var(--theme-chalk) !important;
 		&.float-right {
 			font-size: 14px;
 			margin-top: 1.4rem;
@@ -212,7 +214,7 @@ const Main = styled.main`
 		margin-bottom: 2rem;
 		padding: 26px 29px !important;
 		&:focus {
-			border-color: #5b42b1c7 !important;
+			border-color: var(--theme-chalk) !important;
 		}
 	}
 `;
