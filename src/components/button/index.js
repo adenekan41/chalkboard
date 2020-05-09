@@ -37,7 +37,7 @@ const ButtonWrapper = styled.button`
 		transform: translate(0, 11px);
 	}
 	&.btn-chalk {
-		background: #5b42b1;
+		background: var(--theme-chalk);
 		color: #fff;
 		border: none;
 		padding: 15px 32px;

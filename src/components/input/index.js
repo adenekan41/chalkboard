@@ -80,7 +80,7 @@ const InputWrapper = styled.div`
 		margin-bottom: 2rem;
 		padding: 26px 29px !important;
 		&:focus {
-			border-color: #5b42b1c7 !important;
+			border-color: var(--theme-chalk) !important;
 		}
 		&.error__form {
 			border: 1px solid red !important;
