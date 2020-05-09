@@ -1,5 +1,5 @@
 {
-  "name": "thinkless",
+  "name": "chalkboard",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,6 +10,7 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\""
   },
   "dependencies": {
+    "bootstrap-vue": "^2.13.1",
     "codewonders-helpers": "^0.0.9",
     "core-js": "^3.6.4",
     "firebase": "^7.9.1",
